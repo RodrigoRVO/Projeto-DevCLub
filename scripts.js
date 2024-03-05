@@ -16,13 +16,47 @@ function convertValues() {
     const bitcoinToday = 335.965
     const realToday = 0.20
 
+
+    //currency to convert // 
     
+    if (currencyPrincipal.value == 'real') {
     currencyValueToConvert.innerHTML = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL'
     }).format(inputCurrencyValue)
+    }
 
-   
+    if (currencyPrincipal.value == 'dolar') {
+    currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(inputCurrencyValue)
+    }
+
+    if (currencyPrincipal.value == 'euro') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('de-DE', {
+            style: 'currency',
+            currency: 'EUR'
+        }).format(inputCurrencyValue)
+    }
+
+    if (currencyPrincipal.value == 'libra') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-UK', {
+            style: 'currency',
+            currency: 'GBP'
+        }).format(inputCurrencyValue)
+    }
+
+    if (currencyPrincipal.value == 'bitcoin') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'BTC'
+        }).format(inputCurrencyValue)
+    }
+
+
+
+    // currency converted //
   
     if (currencySelect.value == 'dolar') {
         currencyValueConverted.innerHTML = new Intl.NumberFormat('en-US', {
@@ -68,7 +102,37 @@ function convertValues() {
 }
 
 function changeCurrency(){
+
+                                                                    // currency to convert // 
+    const principalToConvert = document.querySelector(".currency-principal-to-convert")
+    const principalImage = document.querySelector(".currency-image-to-convert")
+
+    if (currencyPrincipal.value == 'dolar') {
+        principalToConvert.innerHTML = 'Dólar americano'
+        principalImage.src = './assets/dolar.png'
+    }
+
+    
+    if (currencyPrincipal.value == 'euro') {
+        principalToConvert.innerHTML = 'Euro'
+        principalImage.src = './assets/euro (1).png'
+    }
+
+    if (currencyPrincipal.value == 'libra'){
+        principalToConvert.innerHTML = 'Libra'
+        principalImage.src = './assets/libra.png'
+    }
+
+    if (currencyPrincipal.value == 'bitcoin'){
+        principalToConvert.innerHTML = 'Bitcoin'
+        principalImage.src = './assets/bitcoin 1.png'
+    }
+
+
+    
+
     const currencyName = document.getElementById('currency-name')
+                                                                    // currency converted //
     const currencyImage = document.querySelector('.currency-img')
 
     if (currencySelect.value == 'dolar') {
