@@ -55,8 +55,7 @@ function convertValues() {
     }
 
 
-
-    // currency converted //
+    //------------------------------------------------------------------------//
   
     if (currencySelect.value == 'dolar') {
         currencyValueConverted.innerHTML = new Intl.NumberFormat('en-US', {
@@ -97,8 +96,203 @@ function convertValues() {
 
     }
 
+    //----------------------------------------------------------------------------------//
 
 
+    if (currencyPrincipal.value == 'dolar' && currencySelect.value == 'euro') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(inputCurrencyValue),
+
+    currencyValueConverted.innerHTML = new Intl.NumberFormat('de-DE', {
+            style: 'currency',
+            currency: 'EUR'
+        }).format(inputCurrencyValue / euroToday)
+
+    }
+
+    if (currencyPrincipal.value == 'euro' && currencySelect.value == 'dolar'){
+         currencyValueToConvert.innerHTML = new Intl.NumberFormat('de-DE', {
+            style: 'currency',
+            currency: 'EUR'
+        }).format(inputCurrencyValue),
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        }).format(inputCurrencyValue / dolarToday)
+
+    }
+
+    if (currencyPrincipal.value == 'dolar' && currencySelect.value == 'libra') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(inputCurrencyValue),
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('en-UK', {
+            style: 'currency',
+            currency: 'GBP'
+        }).format(inputCurrencyValue / libraToday)
+
+    }
+
+    if (currencyPrincipal.value == 'libra' && currencySelect.value == 'dolar') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-UK', {
+            style: 'currency',
+            currency: 'GBP'
+        }).format(inputCurrencyValue),
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        }).format(inputCurrencyValue / dolarToday)
+    }
+
+    if (currencyPrincipal.value == 'dolar' && currencySelect.value == 'bitcoin') {
+         currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(inputCurrencyValue),
+
+    currencyValueConverted.innerHTML = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'BTC'
+        }).format(inputCurrencyValue/bitcoinToday)
+    }
+
+    if (currencyPrincipal.value == 'bitcoin' && currencySelect.value == 'dolar') {
+         currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'BTC'
+        }).format(inputCurrencyValue),
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        }).format(inputCurrencyValue / dolarToday)
+    }
+
+    if (currencyPrincipal.value == 'dolar' && currencySelect.value == 'real') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+        }).format(inputCurrencyValue),
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        }).format(inputCurrencyValue/realToday)
+    }
+
+    if (currencyPrincipal.value == 'euro' && currencySelect.value == 'libra') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('de-DE', {
+            style: 'currency',
+            currency: 'EUR'
+        }).format(inputCurrencyValue),
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('en-UK', {
+            style: 'currency',
+            currency: 'GBP'
+        }).format(inputCurrencyValue / libraToday)
+    }
+
+    if (currencyPrincipal.value == 'libra' && currencySelect.value == 'euro') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-UK', {
+            style: 'currency',
+            currency: 'GBP'
+        }).format(inputCurrencyValue),
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('de-DE', {
+            style: 'currency',
+            currency: 'EUR'
+        }).format(inputCurrencyValue / euroToday)        
+    }
+
+    if (currencyPrincipal.value == 'euro' && currencySelect.value == 'bitcoin') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('de-DE', {
+            style: 'currency',
+            currency: 'EUR'
+        }).format(inputCurrencyValue),
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'BTC'
+        }).format(inputCurrencyValue/bitcoinToday)
+    }
+
+    if (currencyPrincipal.value == 'bitcoin' && currencySelect.value == 'euro') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'BTC'
+        }).format(inputCurrencyValue),
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('de-DE', {
+            style: 'currency',
+            currency: 'EUR'
+        }).format(inputCurrencyValue / euroToday) 
+    }
+
+    if (currencyPrincipal.value == 'euro' && currencySelect.value == 'real') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('de-DE', {
+            style: 'currency',
+            currency: 'EUR'
+        }).format(inputCurrencyValue),
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        }).format(inputCurrencyValue/realToday)
+    }
+
+    if (currencyPrincipal.value == 'libra' && currencySelect.value == 'bitcoin') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-UK', {
+            style: 'currency',
+            currency: 'GBP'
+        }).format(inputCurrencyValue),
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'BTC'
+        }).format(inputCurrencyValue/bitcoinToday)
+    }
+
+    if (currencyPrincipal.value == 'bitcoin' && currencySelect.value == 'libra') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'BTC'
+        }).format(inputCurrencyValue),
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('en-UK', {
+            style: 'currency',
+            currency: 'GBP'
+        }).format(inputCurrencyValue / libraToday)
+    }
+
+    if (currencyPrincipal.value == 'libra' && currencySelect.value == 'real') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-UK', {
+            style: 'currency',
+            currency: 'GBP'
+        }).format(inputCurrencyValue),
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        }).format(inputCurrencyValue/realToday)
+    }
+
+    if (currencyPrincipal.value == 'bitcoin' && currencySelect.value == 'real') {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'BTC'
+        }).format(inputCurrencyValue),
+
+        currencyValueConverted.innerHTML = new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        }).format(inputCurrencyValue/realToday)
+    }
 }
 
 function changeCurrency(){
