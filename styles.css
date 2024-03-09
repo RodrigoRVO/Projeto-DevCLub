@@ -104,3 +104,39 @@ section {
     font-weight: 700;
     font-size: 20px;
 }
+
+
+@media screen and (max-width:900px) {
+
+    main {
+        background-color: transparent;
+        width: 80%;
+        height: auto;
+        position: relative;
+        left: -25px;
+    }
+
+    label {
+        color: aliceblue;
+    }
+
+    section {
+        background-color: aliceblue;
+    }
+
+    .logo-site {
+        position: relative;
+        top: -395px;
+        left: 10px;
+        width: 60px;
+        border-radius: 5px;
+    }
+
+    .convert-button {
+        background-color: #15db15;
+        color: black;
+        border: 1px solid rgb(10, 68, 10);
+        
+    }
+}
+
