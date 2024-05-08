@@ -5,6 +5,8 @@
 porque não converter outras moedas também? Gosto dessa história pois quando contatei o suporte do curso ele me disseram que eu estava querendo fazer mais que o ensinado, mas me deram a orientação, Projeto concluído com sucesso e de bonus aproveitei para treinar 
 a responsividade no CSS 💥🚀</p>
 
+<p>Na última atualização do código de programação, também foi adicionada a API que atua na obtenção de dados dos valores em tempo real das moedas disponíveis para a conversão!</p>
+
 <h2> Tecnologias Utilizadas </h2>
 <br>
 <b>- HTML </b> <br>
